@@ -4,22 +4,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Scanner in = new Scanner(System.in);
-        int valorUno, valorDos, seleccion;
-        
-        System.out.print("Ingrese el primer valor: ");
-        valorUno = in.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int a, b, op;
 
-        System.out.print("Ingrese el segundo valor: ");
-        valorDos = in.nextInt();
+        System.out.println("Ingrese el primer valor: ");
+        a = sc.nextInt();
+
+        System.out.println("Ingrese el segundo valor: ");
+        b = sc.nextInt();
 
         System.out.println("Escoja la operacion que decea realizar: \n" +
                 "1:suma 2:Resta 3:Multiplicacion 4:Divicion");
-        seleccion = in.nextInt();
+        op = sc.nextInt();
 
-        Operaciones operacion = new Operaciones(valorUno, valorDos);
+        Operaciones operacion = new Operaciones(a, b);
 
-        switch (seleccion){
+        switch (op){
             case 1: operacion.sumar();
                     break;
             case 2: operacion.restar();
