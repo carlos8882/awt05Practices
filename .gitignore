@@ -1,0 +1,10 @@
+### Config Git ignore ###
+### .idea
+.idea
+### .gradle
+.gradle
+build/
+### IntelliJ
+out/
+
+
