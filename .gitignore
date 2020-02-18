@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 .idea/
 build/
 .gradle
 out/
+=======
+### Config Git ignore ###
+### .idea
+.idea
+### .gradle
+.gradle
+build/
+### IntelliJ
+out/
+
+
+>>>>>>> 6554e4756cd51bd61008b5d38000c70fce42d710

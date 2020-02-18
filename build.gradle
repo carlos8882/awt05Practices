@@ -2,7 +2,11 @@ plugins {
     id 'java'
 }
 
+<<<<<<< HEAD
 group 'awt05'
+=======
+group 'practices'
+>>>>>>> 6554e4756cd51bd61008b5d38000c70fce42d710
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
