@@ -1,0 +1,8 @@
+##COnfig Git Ignore
+## .idea
+.idea
+##.gradle
+.gradle
+build/
+## IntelliJ
+out/
