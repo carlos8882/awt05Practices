@@ -1,8 +1,8 @@
-##COnfig Git Ignore
-## .idea
+### Config Git ignore ###
+### .idea
 .idea
-##.gradle
+### .gradle
 .gradle
 build/
-## IntelliJ
+### IntelliJ
 out/
