@@ -1,4 +1,4 @@
-package org.jalafundation;
+package Lucero;
 
 import java.security.SecureRandom;
 
@@ -38,21 +38,23 @@ public class LexerText {
 
         if (Character.isWhitespace(getCurrent())) {
             int start = position;
-            while (Character.isDigit(getCurrent())) {
-                next();
-            }
+            next();
             String whiteSpaces = text.substring(start, position);
             return new Token(whiteSpaces, KindToken.WHITESPACETOKEN);
         }
 
         switch (getCurrent()) {
             case '+':
+                next();
                 return new Token("+", KindToken.ADDITIONTOKEN);
             case '-':
+                next();
                 return new Token("-", KindToken.SUBTRACTIONTOKEN);
             case '*':
+                next();
                 return new Token("*", KindToken.MULTIPLICATIONTOKEN);
             case '/':
+                next();
                 return new Token("/", KindToken.DIVISIONTOKEN);
             default:
                 return new Token("Invalid", KindToken.INVALIDTOKEN);

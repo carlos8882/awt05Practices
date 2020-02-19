@@ -1,4 +1,4 @@
-package org.jalafundation;
+package Lucero;
 
 public class Evaluator {
 
@@ -13,11 +13,11 @@ public class Evaluator {
             case ADDITIONTOKEN:
                 return left + right;
             case SUBTRACTIONTOKEN:
-                return left + right;
+                return left - right;
             case MULTIPLICATIONTOKEN:
-                return left + right;
+                return left * right;
             case DIVISIONTOKEN:
-                return left + right;
+                return left / right;
             default:
                 throw new ArithmeticException("Unexpected operator");
         }

@@ -1,4 +1,4 @@
-package org.jalafundation;
+package Lucero;
 
 public enum KindToken {
     ADDITIONTOKEN,

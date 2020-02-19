@@ -1,4 +1,4 @@
-package org.jalafundation;
+package Lucero;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +9,8 @@ public class ParserToken {
     private int position;
 
     public ParserToken(String text) {
-
-        List<Token> tokens = new ArrayList<Token>();
+        this.position = 0;
+        this.tokens = new ArrayList<Token>();
         LexerText lexer = new LexerText(text);
         Token token;
         do {
