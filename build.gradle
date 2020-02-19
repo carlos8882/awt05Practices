@@ -2,15 +2,8 @@ plugins {
     id 'java'
 }
 
-<<<<<<< HEAD
 group 'practices'
-=======
-<<<<<<< HEAD
-group 'awt05'
-=======
-group 'practices'
->>>>>>> 6554e4756cd51bd61008b5d38000c70fce42d710
->>>>>>> 4cca36e6bb3085ae54bc7e3752023c32d8ca9684
+
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
