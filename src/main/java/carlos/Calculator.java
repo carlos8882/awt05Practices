@@ -34,8 +34,6 @@ public class Calculator {
                         System.out.println("Introduccion de datos erroneo");
                 }
             }
-            System.out.println("No se realizo ninguna operacion el numero introducido es: "+ term);
-            break;
         }
 
 
