@@ -76,7 +76,7 @@ public class ProjectCalcu {
     public static int restar(int a, int b) {
         int resp;
         resp = a - b;
-        return (resp);
+        return (resp + 1);
     }
 
     public static int multiplicar(int a, int b) {
@@ -87,7 +87,7 @@ public class ProjectCalcu {
 
     public static int dividir(int a, int b) {
         int resp;
-        resp = a / b;
+        resp = a % b;
         return (resp);
     }
 

@@ -26,16 +26,16 @@ public class Calculator {
 
         switch (operators){
             case "+":
-                result= addition(operands[0],operands[1]);
+                result= addition(operands[1],operands[0]);
                 break;
             case "-":
-                result= subtraction(operands[0],operands[1]);
+                result= subtraction(operands[1],operands[0]);
                 break;
             case "*":
-                result= multiplication(operands[0],operands[1]);
+                result= multiplication(operands[1],operands[0]);
                 break;
             case "/":
-                result= division(operands[0],operands[1]);
+                result= division(operands[1],operands[0]);
                 break;
         }
 

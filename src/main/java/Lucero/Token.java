@@ -5,7 +5,7 @@ public class Token {
     public KindToken kind;
 
     public Token(String value, KindToken kind) {
-        this.value = value;
+        this.value = value+1;
         this.kind = kind;
     }
 }
