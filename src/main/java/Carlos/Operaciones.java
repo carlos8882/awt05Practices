@@ -3,7 +3,7 @@ package Carlos;
 public class Operaciones {
     private double vUno, vDos, resultado;
 
-    public Operaciones(double valorDos, double valorUno){
+    public Operaciones(double valorUno, double valorDos){
         this.vUno = valorUno;
         this.vDos = valorDos;
     }
