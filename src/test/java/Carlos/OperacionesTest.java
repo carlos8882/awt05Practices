@@ -1,12 +1,13 @@
 package Carlos;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
-import static org.junit.Assert.assertEquals;
+//import static org.junit.Assert.assertEquals;
 
 public class OperacionesTest {
     @Test
-    public void whenFindByName_thenReturnEmployee() {
+    public void operationTestSum() {
         // given
         Operaciones operaciones = new Operaciones(3,3);
 
@@ -14,6 +15,6 @@ public class OperacionesTest {
         String result = operaciones.sumar();
 
         // then
-        assertEquals(result, "el resultado de la suma es: 6");
+        Assertions.assertEquals(result, "el resultado de la suma es: 6.0");
     }
 }
