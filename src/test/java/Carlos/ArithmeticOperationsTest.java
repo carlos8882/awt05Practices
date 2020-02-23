@@ -56,5 +56,31 @@ public class ArithmeticOperationsTest {
         // then
         assertEquals(result, "The division total is: 15.0");
     }
+    @Test
+    public void givenTwoNumbersWhenPowerThenResult() {
+        // given
+        int firstValue = 4;
+        int secondValue = 3;
+        ArithmeticOperations operation = new ArithmeticOperations(firstValue,secondValue);
+
+        // when
+        String result = operation.power();
+
+        // then
+        assertEquals(result, "The power result is: 64.0");
+    }
+    @Test
+    public void givenTwoNumbersWhenRootThenResult() {
+        // given
+        int firstValue = 625;
+        int secondValue = 4;
+        ArithmeticOperations operation = new ArithmeticOperations(firstValue,secondValue);
+
+        // when
+        String result = operation.root();
+
+        // then
+        assertEquals(result, "The root result is: 5.0");
+    }
 
 }
