@@ -1,28 +1,30 @@
 package Carlos;
 
-public class Operaciones {
-    private double vUno, vDos, resultado;
+public class ArithmeticOperations {
+    private double firstValue;
+    private double secondValue;
+    private double result;
 
-    public Operaciones(double valorUno, double valorDos){
-        this.vUno = valorUno;
-        this.vDos = valorDos;
+    public ArithmeticOperations(double firstValue, double secondValue){
+        this.firstValue = firstValue;
+        this.secondValue = secondValue;
     }
 
-    public String sumar(){
-        resultado = vUno + vDos;
-        return("el resultado de la suma es: "+ resultado);
+    public String sum(){
+        result = firstValue + secondValue;
+        return("The sum total is: "+ result);
     }
-    public String restar(){
-        resultado = vUno - vDos;
-        return("el resultado de la resta es: "+ resultado);
+    public String subtraction(){
+        result = firstValue - secondValue;
+        return("The subtraction total is: "+ result);
     }
-    public String multiplicar(){
-        resultado = vUno * vDos;
-        return ("el resultado de la multiplicacion es: "+ resultado);
+    public String multiplication(){
+        result = firstValue * secondValue;
+        return ("The multiplication total is: : "+ result);
     }
-    public String dividir(){
-        resultado = vUno / vDos;
-        return ("el resultado de la divicion es: "+ resultado);
+    public String division(){
+        result = firstValue / secondValue;
+        return ("The division total is: "+ result);
     }
 
 

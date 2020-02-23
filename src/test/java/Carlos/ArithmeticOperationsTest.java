@@ -3,31 +3,19 @@ package Carlos;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-public class OperacionesTest {
+public class ArithmeticOperationsTest {
     @Test
     public void givenTwoNumbersWhenSumThenResult() {
         // given
-        int firstValue = 3;
-        int secondValue = 3;
-        Operaciones operaciones = new Operaciones(firstValue,secondValue);
+        int firstValue = 15;
+        int secondValue = 24;
+        ArithmeticOperations operation = new ArithmeticOperations(firstValue,secondValue);
 
         // when
-        String result = operaciones.sumar();
+        String result = operation.sum();
 
         // then
-        assertEquals(result, "el resultado de la suma es: 6.0");
+        assertEquals(result, "The sum total is: 39.0");
     }
-    @Test
-    public void givenTwoNumbersWhenRestThenResult() {
-        // given
-        int firstValue = 12;
-        int secondValue = 3;
-        Operaciones operaciones = new Operaciones(firstValue,secondValue);
 
-        // when
-        String result = operaciones.restar();
-
-        // then
-        assertEquals(result, "el resultado de la resta es: 9.0");
-    }
 }
