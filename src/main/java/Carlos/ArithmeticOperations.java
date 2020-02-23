@@ -20,7 +20,7 @@ public class ArithmeticOperations {
     }
     public String multiplication(){
         result = firstValue * secondValue;
-        return ("The multiplication total is: : "+ result);
+        return ("The multiplication total is: "+ result);
     }
     public String division(){
         result = firstValue / secondValue;
