@@ -26,6 +26,14 @@ public class ArithmeticOperations {
         result = firstValue / secondValue;
         return ("The division total is: "+ result);
     }
+    public String power(){
+        result = Math.pow(firstValue, secondValue);
+        return ("The power result is: "+ result);
+    }
+    public String root(){
+        result = Math.pow(firstValue,1/secondValue);
+        return ("The root result is: "+result);
+    }
 
 
 }

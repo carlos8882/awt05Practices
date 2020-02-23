@@ -13,7 +13,7 @@ public class Calculator {
         term = scanner.nextLine();
 
         for (int i = 0; i < term.length(); i++) {
-            if ("/*-+".contains(term.charAt(i) + "")) {//I use charAt for search a char that contains any operation symbol
+            if ("/*-+pr".contains(term.charAt(i) + "")) {//I use charAt for search a char that contains any operation symbol
                 firsTerm = Double.parseDouble(term.substring(0, i));
                 operator = term.substring(i, i + 1);
                 if (term.substring(i + 1).length() != 0) {
@@ -35,6 +35,12 @@ public class Calculator {
                         break;
                     case "/":
                         System.out.println(operation.division());
+                        break;
+                    case "p":
+                        System.out.println(operation.power());
+                        break;
+                    case "r":
+                        System.out.println(operation.root());
                         break;
                     default:
                         System.out.println("Wrong operation data");
