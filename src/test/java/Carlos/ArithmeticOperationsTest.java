@@ -57,6 +57,19 @@ public class ArithmeticOperationsTest {
         assertEquals(result, "The division total is: 15.0");
     }
     @Test
+    public void givenTwoNumbersWhenDiviTedByZeroThenResult() {
+        // given
+        int firstValue = 34;
+        int secondValue = 0;
+        ArithmeticOperations operation = new ArithmeticOperations(firstValue,secondValue);
+
+        // when
+        String result = operation.division();
+
+        // then
+        assertEquals(result, "Can't divide by zero");
+    }
+    @Test
     public void givenTwoNumbersWhenPowerThenResult() {
         // given
         int firstValue = 4;

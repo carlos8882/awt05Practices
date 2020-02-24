@@ -23,8 +23,12 @@ public class ArithmeticOperations {
         return ("The multiplication total is: "+ result);
     }
     public String division(){
-        result = firstValue / secondValue;
-        return ("The division total is: "+ result);
+        if (secondValue == 0){
+            return ("Can't divide by zero");
+        }else {
+            result = firstValue / secondValue;
+            return ("The division total is: " + result);
+        }
     }
     public String power(){
         result = Math.pow(firstValue, secondValue);
