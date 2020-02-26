@@ -1,22 +1,19 @@
 package Lucero;
 
-import java.util.ArrayList;
-import java.util.List;
+public class BinaryExpression implements ExpressionSyntax {
 
-public class BinaryExpression {
-
-    private Token left;
+    private ExpressionSyntax left;
     private Token operator;
-    private Token right;
+    private ExpressionSyntax right;
 
-    public BinaryExpression(Token left, Token operator, Token right) {
+    public BinaryExpression(ExpressionSyntax left, Token operator, ExpressionSyntax right) {
 
         this.left = left;
         this.operator = operator;
         this.right = right;
     }
 
-    public Token getLeft() {
+    public ExpressionSyntax getLeft() {
         return left;
     }
 
@@ -24,7 +21,13 @@ public class BinaryExpression {
         return operator;
     }
 
-    public Token getRight() {
+    public ExpressionSyntax getRight() {
         return right;
     }
+
+    @Override
+    public SyntaxKind getKind() {
+        return SyntaxKind.BINARY_EXPRESSION;
+    }
 }
+

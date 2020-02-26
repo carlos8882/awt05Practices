@@ -10,13 +10,11 @@ public class Program {
             String text = input.nextLine();
 
             System.out.println("Result:");
-
-            ParserToken parser = new ParserToken(text);
-
-            BinaryExpression expression = parser.Parse();
+            Parser parser = new Parser(text);
+            ExpressionSyntax expression = parser.parse();
             Evaluator evaluator = new Evaluator();
 
-            int result = evaluator.evaluateExpression(expression);
+            int result = evaluator.evaluate(expression);
             System.out.println(result);
     }
 }

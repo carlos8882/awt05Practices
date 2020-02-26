@@ -1,12 +1,10 @@
 package Lucero;
 
-import java.security.SecureRandom;
-
-public class LexerText {
+public class Lexer {
     private String text;
     private int position;
 
-    public LexerText(String text) {
+    public Lexer(String text) {
 
         this.text = text;
     }
@@ -18,46 +16,46 @@ public class LexerText {
         return text.charAt(position);
     }
 
-    private void next() {
+    private void nextPosition() {
         position++;
     }
 
-    public Token NextToken() {
+    public Token nextToken() {
         if (position == text.length()) {
-            return new Token("\n0000", KindToken.ENDTOKEN);
+            return new Token("\n0000", SyntaxKind.END_TOKEN);
         }
 
         if (Character.isDigit(getCurrent())) {
             int start = position;
             while (Character.isDigit(getCurrent())) {
-                next();
+                nextPosition();
             }
             String number = text.substring(start, position);
-            return new Token(number, KindToken.NUMBERTOKEN);
+            return new Token(number, SyntaxKind.NUMBER_TOKEN);
         }
 
         if (Character.isWhitespace(getCurrent())) {
             int start = position;
-            next();
+            nextPosition();
             String whiteSpaces = text.substring(start, position);
-            return new Token(whiteSpaces, KindToken.WHITESPACETOKEN);
+            return new Token(whiteSpaces, SyntaxKind.WHITESPACE_TOKEN);
         }
 
         switch (getCurrent()) {
             case '+':
-                next();
-                return new Token("+", KindToken.ADDITIONTOKEN);
+                nextPosition();
+                return new Token("+", SyntaxKind.ADDITION_TOKEN);
             case '-':
-                next();
-                return new Token("-", KindToken.SUBTRACTIONTOKEN);
+                nextPosition();
+                return new Token("-", SyntaxKind.SUBTRACTION_TOKEN);
             case '*':
-                next();
-                return new Token("*", KindToken.MULTIPLICATIONTOKEN);
+                nextPosition();
+                return new Token("*", SyntaxKind.MULTIPLICATION_TOKEN);
             case '/':
-                next();
-                return new Token("/", KindToken.DIVISIONTOKEN);
+                nextPosition();
+                return new Token("/", SyntaxKind.DIVISION_TOKEN);
             default:
-                return new Token("Invalid", KindToken.INVALIDTOKEN);
+                return new Token("Invalid", SyntaxKind.INVALID_TOKEN);
         }
     }
 }
