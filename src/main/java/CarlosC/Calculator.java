@@ -25,7 +25,7 @@ public class Calculator {
         System.out.println(result);
     }
 
-    public static int getResult(String operator, String expresion){
+    private static int getResult(String operator, String expresion){
         int result = 0;
         String[] values = new String[]{};
         switch (operator){
@@ -63,7 +63,13 @@ public class Calculator {
     }
 
     public static int div(int number1, int number2){
-        return number1 / number2;
+        try {
+            return number1 / number2;
+        }
+        catch (ArithmeticException exception){
+            System.out.println("ArithmeticException");
+            return 0;
+        }
     }
 
 
